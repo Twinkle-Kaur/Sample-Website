@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="css/reg.css" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+        <script>
+            function val()
+            {
+                let a=document.getElementById("un").value;
+                let b=document.getElementById("email").value;
+                let c=document.getElementById("mobile").value;
+                let d=document.getElementById("pass").value;
+                let e=document.getElementById("rpass").value;
+                let areq=/^[a-zA-z]+$/;
+                let breq=/^([A-Z a-z 0-9 _\-\.])+\@([a-z A-Z0-9_\-\.])+\.([A-Z a-z]{3})+$/;
+                let creq=/^[6-9][0-9]{9}$/;
+                if(a.trim()=="" || b.trim()==""|| c.trim()==""|| d.trim()==""|| e.trim()=="")
+                 {
+                     alert("Filed should not be empty");
+                     return false;
+                 }
+                else if(!areq.test(a))
+                    {
+                        document.getElementById("une").innerHTML="*Enter valid name";
+                        return false;
+                    }
+                else if(!creq.test(c))
+                    {
+                        document.getElementById("moe").innerHTML="*Enter valid Mobile number";
+                        return false;
+                    }
+                else if(!breq.test(b))
+                    {
+                        document.getElementById("me").innerHTML="*Enter valid mail";
+                        return false;
+                    }
+                else if(d.length<8)
+                    {
+                        document.getElementById("pse").innerHTML="*Enter valid password";
+                        return false;
+                    }
+                else if(d!=e)
+                    {
+                        document.getElementById("rpse").innerHTML="*Password doesnot match";
+                        return false;
+                    }
+                else
+                 {
+                     alert("Successful sign-up");
+                     return true;
+                 }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <span class="logo">GLAM</span>
+            <span><a href="index.html">Home</a></span>
+            <span><a href="aboutus.html">About Us</a></span>
+            <span><a href="reg.html">Join Us</a></span>
+            <span><a href="login.html">Login</a></span>
+            <!-- <span><a href="gallary.html">Gallary</a></span> -->
+        </div>
+            
+        <form onsubmit="return val()" action="index.html">
+            <input type="text" placeholder="FULL NAME" id="un" required><br>
+            <span id="une" style="color:red;"></span><br><br>
+            <input type="email" placeholder="EMAIL" id="email" required><br>           
+            <span id="me" style="color:red;"></span><br><br>
+            <input type="text" placeholder="MOBILE" id="mobile" required><br>
+            <span id="moe" style="color:red;"></span><br><br>
+            <input type="date" placeholder="DOB" required><br><br><br>
+            <input type="password" placeholder="PASSWORD" id="pass" required><br>
+            <span id="pse" style="color:red;"></span><br><br>
+            <input type="password" placeholder="REPEAT PASSWORD" id="rpass" required><br>
+            <span id="rpse" style="color:red;"></span><br><br>
+            <a href="login.html">Log Me In! &hearts;</a>
+            <br>
+            <br>
+            <button align="center">Submit</button>
+        </form>
+    </body>
+</html>

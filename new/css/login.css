@@ -1,0 +1,147 @@
+body
+{
+
+   background-color:bisque;
+   animation: tk;
+   animation-duration: 100s;
+   animation-iteration-count: infinite;
+/*
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 500px;
+*/
+    
+}
+.menu{
+    background-color: white;
+    position: sticky;
+    padding: 20px 15px;
+    box-shadow: 5px 5px 3px black;
+    margin-top: -10px;
+    margin-left: -7px;
+    margin-right: -7px;
+}
+.menu a
+{   
+    width: 140px;
+    margin-left: 130px;
+    font-family: fantasy;
+    font-size: 20px;
+    text-decoration: none;
+    color: rosybrown;
+    display:inline-block;
+    padding: 6px;
+    text-align: center;
+    border-radius: 15px;
+}
+.menu a:hover
+{
+    background: crimson;
+    
+}
+.menu a:active
+{
+    background:  darkred;
+    
+}
+.logo
+{
+    color:rgb(248, 186, 110);
+    font: normal 35px 'Cookie', cursive;
+    /* font-family: Lobster,forte; */
+    text-shadow: 4px 1px 0px rgb(109, 109, 109);
+    font-weight: bolder;
+    margin-left: 30px;
+}
+
+p{
+    text-align: center;
+    text-shadow:5px 6px 3px gray;
+    color: white;
+    font-size: 45px;
+    font-family: fantasy;
+    font-weight: bolder;
+}
+form{
+    align-content: center;
+
+    border: 1px none;
+    border-radius: 4px;
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+    padding-top:70px;
+    
+/*    opacity: 0.2;*/
+/*    rgba(0,0,0,0.4);*/
+    
+}
+@keyframes tk
+        {
+            0%{background-color: red}
+            10%{background-color: bisque}
+            20%{background-color: burlywood}
+            30%{background-color: orange}
+            40%{background-color: peru}
+            50%{background-color: hotpink}
+            60%{background-color: black}
+            70%{background-color: skyblue}
+            80%{background-color: purple}
+            90%{background-color: olive}
+            100%{background-color: orangered}
+            
+        }
+div{
+    opacity: 0.2px;
+}
+button
+{
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px  coral solid;
+    box-shadow: 3px 2px 2px rgb(200,180,80);
+    height: 40px;
+    width: 300px;
+/*    transition: background-image 2s;*/
+}
+
+button:hover
+{
+    font-size: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,coral,orangered,red);
+    border: none;
+    box-shadow: 10px 5px 2px grey;
+    height: 40px;
+    width: 300px;
+}
+button:active
+{
+    font-size: 20px;
+    border-radius: 20px;
+    background-image:linear-gradient(to right,red,orangered,coral);
+    border-color:none;
+    box-shadow: 10px 5px 2px grey;
+    height: 40px;
+    width: 300px;
+}
+input{
+
+    height: 60px;
+    width:300px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color:orangered;
+
+}
